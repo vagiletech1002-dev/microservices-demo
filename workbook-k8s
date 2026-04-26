@@ -172,3 +172,7 @@ kubectl apply -f https://raw.githubusercontent.com/istio/istio/release-1.20/samp
 
 kubectl patch svc prometheus -n istio-system -p '{"spec": {"type": "NodePort"}}'
 kubectl patch svc grafana -n istio-system -p '{"spec": {"type": "NodePort"}}'
+
+kubectl apply -f https://github.com/kubernetes/kube-state-metrics/releases/latest/download/kube-state-metrics.yaml
+
+kubectl apply -f https://raw.githubusercontent.com/prometheus-operator/kube-prometheus/main/manifests/node-exporter-daemonset.yaml
